@@ -182,8 +182,10 @@ h5,
 /** styles for header **/
 
 .site_header {
+  position: sticky;
+  top: 0;
   padding: var(--space-s) 0;
-  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9));
+  background: linear-gradient(rgba(26, 26, 64), rgba(26, 26, 64));
 }
 
 .site_header_nav ul li a {
@@ -216,4 +218,41 @@ section#hero {
   background-attachment: scroll;
   color: #fafafa;
   --color-accent: #8a2be2;
+}
+
+/** About section **/
+
+.about_content {
+  padding: var(--space-xl) 0;
+  transform: skewX(-10deg);
+}
+
+@media (max-width: 468px) {
+  .about_content {
+    transform: skewX(0deg);
+  }
+}
+
+.about_figure {
+  padding: var(--space-xl) 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+}
+
+.about_img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.about_caption {
+  padding: var(--space-3xs) 0;
+}
+
+section#about {
+  background-color: #ffffff;
+  color: #333;
+  --color-accent: #ffd700;
 }

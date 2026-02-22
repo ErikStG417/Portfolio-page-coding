@@ -144,10 +144,10 @@ h5,
 }
 
 @media (max-width: 468px) {
-  .flex-around {
+  .flex_around {
     justify-content: center;
   }
-  .flex-between {
+  .flex_between {
     justify-content: center;
   }
 }
@@ -184,12 +184,13 @@ h5,
 .site_header {
   position: sticky;
   top: 0;
+  z-index: 1;
   padding: var(--space-s) 0;
   background: linear-gradient(rgba(26, 26, 64), rgba(26, 26, 64));
 }
 
-.site_header_nav ul li a {
-  text-decoration: none;
+.site_header_nav ul li a  {
+  text-decoration: underline;
   color: #fff;
 }
 
@@ -199,6 +200,10 @@ h5,
 
 .hero_content h1 {
   margin-bottom: var(--space-s);
+}
+.hero_content p {
+  color: #fff;
+  transform: skewX(-20deg);
 }
 
 .hero_social {
@@ -255,4 +260,49 @@ section#about {
   background-color: #ffffff;
   color: #333;
   --color-accent: #ffd700;
+}
+
+.project_grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project_card {
+  background: #f5f5f5;
+  padding: 20px;
+  width: 260px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.project_card:hover {
+  transform: translateY(-5px);
+}
+
+.project_card h5, p {
+  color: #000;
+}
+
+.project_card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077ff;
+  text-decoration: none;
+}
+
+section#projects {
+  background: linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
+  url("assets/background_photo.jpg");
+  padding-bottom: 40px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: #f0f0f0;
+  --color-accent: #8a2be2;
+}
+
+h4 {
+  padding-bottom: 20px;
 }

@@ -259,50 +259,98 @@ section#hero {
 section#about {
   background-color: #ffffff;
   color: #333;
-  --color-accent: #ffd700;
-}
-
-.project_grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.project_card {
-  background: #f5f5f5;
-  padding: 20px;
-  width: 260px;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-}
-
-.project_card:hover {
-  transform: translateY(-5px);
-}
-
-.project_card h5, p {
-  color: #000;
-}
-
-.project_card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #0077ff;
-  text-decoration: none;
 }
 
 section#projects {
   background: linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
-  url("assets/background_photo.jpg");
-  padding-bottom: 40px;
-  background-size: cover;
-  background-position: top;
-  background-attachment: scroll;
-  color: #f0f0f0;
-  --color-accent: #8a2be2;
+  url("assets/background_photo.jpg")
 }
 
-h4 {
-  padding-bottom: 20px;
+section#projects h4 {
+  color: #fff;
 }
+
+.project_grid {
+  display: flex;
+  gap: var(--space-l);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
+}
+
+.project_card {
+  background: #fff;
+  padding: var(--space-l);
+  width: 280px;
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project_card:hover {
+  transform: translateY(-6px) rotateY(360deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project_card h5 {
+  margin-top: var(--space-xs);
+}
+ .project_card p {
+  font-size: var(--step--1);
+  margin-bottom: var(--space-s);
+  line-height: 1.4;
+ }
+
+ .project_card a {
+  font-weight: bold;
+  color: #8a2be2;
+  text-decoration: none;
+ }
+
+ .project_card a:hover {
+  text-decoration: underline;
+ }
+
+ .contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+
+ .form_group {
+  display: flex;
+  flex-direction: column;
+ }
+
+ label {
+  margin-bottom: 5px;
+  font-weight: bold;
+ }
+
+ input[type="text"],
+ input[type="email"],
+ textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+ }
+
+ button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+ }
+
+ button[type="submit"]:hover {
+  background-color: #0056b3;
+ }
+
+ section#contact {
+  background-color: #f1f1e5
+ }

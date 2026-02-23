@@ -101,6 +101,10 @@
 
 
                     <form action="https://formspree.io/f/xlgwolwy" method="POST" class="contact_form" id="contact-form">
+                        <div class="honeypot-field" aria-hidden="true">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" tabindex="-1" autocomplete="off">
+                        </div>
                         <div class="flex">
                             <div class="form_group">
                                 <label for="name">NAME</label>
@@ -117,7 +121,10 @@
                             <textarea id="message" name="message" required></textarea>
                         </div>
 
-                        <button type="submit">SEND MESSAGE</button>
+                        <button type="submit" id="submit-btn">
+                            <span class="btn-text">SEND MESSAGE</span>
+                            <span class="spinner" id="spinner"></span>
+                        </button>
 
                         <p id="form-status" class="form-status"></p>
                     </form>

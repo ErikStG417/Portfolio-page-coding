@@ -1,4 +1,4 @@
-/** removes default styling on pretty much everything**/
+/** removes default styling on pretty much everything **/
 
 *,
 *::before,
@@ -69,9 +69,9 @@ main:focus {
   outline: none;
 }
 
-/** main styling of webpage**/
+/** main styling of webpage **/
 
-/**typopgraphy**/
+/** typography **/
 :root {
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -163,12 +163,12 @@ h5,
   text-align: right;
 }
 
-/** define spacing */
+/** define spacing **/
 .padding-top-3xs {
   padding: var(--space-3xs);
 }
 
-/** create the wrappers**/
+/** create the wrappers **/
 
 .wrapper {
   width: 100%;
@@ -266,7 +266,7 @@ section#about {
 
 section#projects {
   background: linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
-  url("assets/background_photo.jpg")
+  url("assets/background_photo.jpg");
 }
 
 section#projects h4 {
@@ -370,12 +370,14 @@ section#projects h4 {
 
 
  .github_icon {
-  filter: drop-shadow(0px 0px 5px #fff)
+  width: 24px;
+  height: 24px;
+  fill: none;;
+  stroke: white;
+  stroke-width: 0.5;
  }
 
- .facebook_icon {
-  filter: drop-shadow(0px 0px 5px #fff);
- }
+ 
  
  #form-status {
   margin-top: 15px;
@@ -403,8 +405,8 @@ section#projects h4 {
  .spinner {
   width: 16px;
   height: 16px;
-  border: 2 px solid transparent;
-  border-top: 2 px solid #fff;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
   border-radius: 50%;
   display: none;
   margin-left: 8px;
@@ -448,17 +450,17 @@ section#projects h4 {
   to {opacity: 1; transform: translateY(0); }
  }
 
- .form-status-success {
+ .form-status.success {
   animation: fadeIn 0.5s ease forwards;
  }
 
  @keyframes shake {
   0%, 100% { transform: translateX(0); }
-  20%, 60% { trasnform: trasnlateX(-5px); }
-  40%, 80% { transform: translateX95px; }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
  }
 
- .form-statu-error {
+ .form-status.error {
   animation: shake 0.4s ease;
  }
 
@@ -468,7 +470,7 @@ section#projects h4 {
   color: green;
  }
 
- .fomr-status.success .checkmark {
-  display: inline-nlock;
+ .form-status.success .checkmark {
+  display: inline-block;
   animation: fadeIn 0.5s ease forwards;
  }

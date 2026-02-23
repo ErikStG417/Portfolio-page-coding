@@ -125,7 +125,7 @@ async function sendForm(e) {
       );
     }
   } catch (error) {
-    showStatus(error.message || "Network error. PLease try again.", "error");
+    showStatus(error.message || "Network error. Please try again.", "error");
   } finally {
     submitBtn.disabled = false;
     submitBtn.removeAttribute("aria-busy");
@@ -136,4 +136,6 @@ async function sendForm(e) {
 
 /** attach event listener */
 
-form.addEventListener("submit", sendForm);
+if (form) {
+  form.addEventListener("submit", sendForm);
+}

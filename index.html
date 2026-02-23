@@ -6,12 +6,12 @@
     <title>Erik Student Portfolio</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body id="top">
     <header class="site_header">
         <div class="wrapper_inner">
             <nav class="site_header_nav">
                 <ul role="list" class="flex flex_center">
-                    <li><a href="#0">HOME</a></li>
+                    <li><a href="#top">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#projects">PROJECTS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/" target="_blank">
+                            <a href="https://www.facebook.com/erik.stgeorges.50/" target="_blank">
                                 <img class="facebook_icon" src="assets/facebook_icon.svg" alt="Facebook" width="24" height="24" />
                             </a>
                         </li>
@@ -103,30 +103,35 @@
                     <form action="https://formspree.io/f/xlgwolwy" method="POST" class="contact_form" id="contact-form">
                         <div class="honeypot-field" aria-hidden="true">
                             <label for="company">Company</label>
-                            <input type="text" id="company" tabindex="-1" autocomplete="off">
+                            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
                         </div>
                         <div class="flex">
                             <div class="form_group">
                                 <label for="name">NAME</label>
-                                <input type="text" id="name" name="name" reqwuired />                          
+                                <input type="text" id="name" name="name" required aria-describedby="name-error"/>
+                                <span id="name-error" class="error-message"></span>                         
                             </div>
                             <div class="form_group">
                                 <label for="email">EMAIL</label>
-                                <input type="email" id="email" name="email" required/>
+                                <input type="email" id="email" name="email" required aria-describedby="email-error"/>
+                                <span id="email-error" class="error-message"></span>
                             </div>
                         </div>
 
                         <div class="form_group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+                            <span id="message-error" class="error-message"></span>
                         </div>
 
                         <button type="submit" id="submit-btn">
                             <span class="btn-text">SEND MESSAGE</span>
-                            <span class="spinner" id="spinner"></span>
+                            <span class="spinner" id="spinner" aria-hidden="true"></span>
                         </button>
 
-                        <p id="form-status" class="form-status"></p>
+                        <p id="form-status" class="form-status" role="status" aria-live="polite">
+                            <span class="checkmark" aria-hidden="true">&check;</span>
+                        </p>
                     </form>
 
 
@@ -146,6 +151,6 @@
             </section>
         </footer>
     </main>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>

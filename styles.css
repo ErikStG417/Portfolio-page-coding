@@ -29,6 +29,9 @@ ol[role="list"] {
 html:focus-within {
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
@@ -288,7 +291,7 @@ section#projects h4 {
 }
 
 .project_card:hover {
-  transform: translateY(-6px) rotateY(360deg);
+  transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -420,11 +423,52 @@ section#projects h4 {
   }
  }
 
- .honeypout-field {
+ .honeypot-field {
   position: absolute;
   left: -9999px;
   opacity: 0;
   height: 0;
   width: 0;
   overflow: hidden;
+ }
+
+ .error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+ }
+
+ input:invalid,
+ textarea:invalid {
+  border: 1px solid red;
+ }
+
+ @keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-5px); }
+  to {opacity: 1; transform: translateY(0); }
+ }
+
+ .form-status-success {
+  animation: fadeIn 0.5s ease forwards;
+ }
+
+ @keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { trasnform: trasnlateX(-5px); }
+  40%, 80% { transform: translateX95px; }
+ }
+
+ .form-statu-error {
+  animation: shake 0.4s ease;
+ }
+
+ .checkmark {
+  display: none;
+  margin-right: 5px;
+  color: green;
+ }
+
+ .fomr-status.success .checkmark {
+  display: inline-nlock;
+  animation: fadeIn 0.5s ease forwards;
  }

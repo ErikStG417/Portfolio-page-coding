@@ -85,6 +85,8 @@
                 </div>
             </div>
         </section>
+
+
         <section id="contact">
             <div class="wrapper">
 
@@ -96,7 +98,9 @@
 
                 <div class="wrapper_inner">
                     <h5 class="h3">Contact Me</h5>
-                    <form action="https://formspree.io/f/xlgwolwy" method="POST" class="contact_form">
+
+
+                    <form action="https://formspree.io/f/xlgwolwy" method="POST" class="contact_form" id="contact-form">
                         <div class="flex">
                             <div class="form_group">
                                 <label for="name">NAME</label>
@@ -107,15 +111,24 @@
                                 <input type="email" id="email" name="email" required/>
                             </div>
                         </div>
+
                         <div class="form_group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
+
                         <button type="submit">SEND MESSAGE</button>
+
+                        <p id="form-status" class="form-status"></p>
                     </form>
+
+
                 </div>
             </div>
         </section>
+
+
+
         <footer>
             <section id="footer">
                 <div class="wrapper">
@@ -126,5 +139,6 @@
             </section>
         </footer>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

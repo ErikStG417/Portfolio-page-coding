@@ -111,6 +111,11 @@ h3,
   font-size: var(--step-3);
 }
 
+.h3 {
+  display: flex;
+  justify-content: center;
+}
+
 h4,
 .h4 {
   font-size: var(--step-2);
@@ -223,7 +228,7 @@ section#hero {
   padding-bottom: 4px;
   background-size: cover;
   background-position: top;
-  background-attachment: scroll;
+  background-attachment: fixed;
   color: #fafafa;
   --color-accent: #8a2be2;
 }
@@ -267,6 +272,9 @@ section#about {
 section#projects {
   background: linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
   url("assets/background_photo.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment:fixed;
 }
 
 section#projects h4 {
@@ -356,6 +364,8 @@ section#projects h4 {
 
  section#contact {
   background-color: #f1f1e5;
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-3xs)
  }
 
  section#footer {

@@ -204,6 +204,7 @@ h5,
 
 .hero_content {
   padding: var(--space-3xl) 0;
+  
 }
 
 .hero_content h1 {
@@ -290,7 +291,7 @@ section#projects h4 {
 }
 
 .project_card {
-  background: #fff;
+  background: linear-gradient(45deg, #1c1049, #5a39b4);
   padding: var(--space-l);
   width: 280px;
   border-radius: 10px;
@@ -300,21 +301,23 @@ section#projects h4 {
 
 .project_card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px 10px 10px  rgb(155, 142, 142);
 }
 
 .project_card h5 {
+  color: #fff;
   margin-top: var(--space-xs);
 }
  .project_card p {
   font-size: var(--step--1);
   margin-bottom: var(--space-s);
   line-height: 1.4;
+  color: #fff;
  }
 
  .project_card a {
   font-weight: bold;
-  color: #8a2be2;
+  color: #973cec;
   text-decoration: none;
  }
 

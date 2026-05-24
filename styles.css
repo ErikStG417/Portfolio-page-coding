@@ -194,17 +194,16 @@ h5,
   top: 0;
   z-index: 1;
   padding: var(--space-s) 0;
-  background: linear-gradient(rgba(26, 26, 64), rgba(26, 26, 64));
+  background: linear-gradient(rgba(26, 26, 64), rgb(30, 30, 102));
 }
 
-.site_header_nav ul li a  {
+.site_header_nav ul li a {
   text-decoration: underline;
   color: #fff;
 }
 
 .hero_content {
   padding: var(--space-3xl) 0;
-  
 }
 
 .hero_content h1 {
@@ -224,8 +223,9 @@ section {
 }
 
 section#hero {
-  background: linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
-  url("assets/background_photo.jpg");
+  background:
+    linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
+    url("assets/background_photo.jpg");
   padding-bottom: 4px;
   background-size: cover;
   background-position: top;
@@ -266,16 +266,17 @@ section#hero {
 }
 
 section#about {
-  background-color: #ffffff;
+  background-color: #e0dcdc;
   color: #333;
 }
 
 section#projects {
-  background: linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
-  url("assets/background_photo.jpg");
+  background:
+    linear-gradient(rgba(26, 26, 64, 0.5), rgba(26, 26, 64, 0.9)),
+    url("assets/background_photo.jpg");
   background-size: cover;
   background-position: top;
-  background-attachment:fixed;
+  background-attachment: fixed;
 }
 
 section#projects h4 {
@@ -295,127 +296,125 @@ section#projects h4 {
   padding: var(--space-l);
   width: 280px;
   border-radius: 10px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .project_card:hover {
   transform: translateY(-6px);
-  box-shadow: -10px 10px 10px  rgb(155, 142, 142);
+  box-shadow: -10px 10px 10px rgb(155, 142, 142);
 }
 
 .project_card h5 {
   color: #fff;
   margin-top: var(--space-xs);
 }
- .project_card p {
+.project_card p {
   font-size: var(--step--1);
   margin-bottom: var(--space-s);
   line-height: 1.4;
   color: #fff;
- }
+}
 
- .project_card a {
+.project_card a {
   font-weight: bold;
   color: #973cec;
   text-decoration: none;
- }
+}
 
- .project_card a:hover {
+.project_card a:hover {
   text-decoration: underline;
- }
+}
 
- .contact_form {
+.contact_form {
   display: flex;
   flex-direction: column;
   gap: 20px;
- }
+}
 
- .form_group {
+.form_group {
   display: flex;
   flex-direction: column;
- }
+}
 
- label {
+label {
   margin-bottom: 5px;
   font-weight: bold;
- }
+}
 
- input[type="text"],
- input[type="email"],
- textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
- }
+}
 
- button[type="submit"] {
+button[type="submit"] {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   background-color: #007bff;
   color: white;
   cursor: pointer;
- }
+}
 
- button[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #0056b3;
- }
+}
 
- section#contact {
-  background-color: #f1f1e5;
+section#contact {
+  background-color: #c5c5c1;
   padding-top: var(--space-m);
-  padding-bottom: var(--space-3xs)
- }
+  padding-bottom: var(--space-3xs);
+}
 
- section#footer {
+section#footer {
   padding: var(--space-2xs);
- }
+}
 
- footer {
+footer {
   display: flex;
   justify-content: center;
   font-weight: bold;
- }
+}
 
-
- .github_icon {
+.github_icon {
   width: 24px;
   height: 24px;
-  fill: none;;
+  fill: none;
   stroke: white;
   stroke-width: 0.5;
- }
+}
 
- 
- 
- #form-status {
+#form-status {
   margin-top: 15px;
- }
+}
 
- .form-status {
+.form-status {
   margin-top: 15px;
   font-weight: 500;
- }
+}
 
- .form-status.success {
+.form-status.success {
   color: green;
- }
+}
 
- .form-status.error {
+.form-status.error {
   color: red;
- }
+}
 
- button:disabled {
+button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
- }
+}
 
-
- .spinner {
+.spinner {
   width: 16px;
   height: 16px;
   border: 2px solid transparent;
@@ -424,66 +423,81 @@ section#projects h4 {
   display: none;
   margin-left: 8px;
   animation: spin 0.6s linear infinite;
- }
+}
 
- #submit-btn {
+#submit-btn {
   display: inline-flex;
   align-items: center;
-  justify-content:center;
- }
+  justify-content: center;
+}
 
- @keyframes spin {
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }
- }
+}
 
- .honeypot-field {
+.honeypot-field {
   position: absolute;
   left: -9999px;
   opacity: 0;
   height: 0;
   width: 0;
   overflow: hidden;
- }
+}
 
- .error-message {
+.error-message {
   color: red;
   font-size: 0.85rem;
   margin-top: 4px;
- }
+}
 
- input:invalid,
- textarea:invalid {
+input:invalid,
+textarea:invalid {
   border: 1px solid red;
- }
+}
 
- @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-5px); }
-  to {opacity: 1; transform: translateY(0); }
- }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
- .form-status.success {
+.form-status.success {
   animation: fadeIn 0.5s ease forwards;
- }
+}
 
- @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-5px); }
-  40%, 80% { transform: translateX(5px); }
- }
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
 
- .form-status.error {
+.form-status.error {
   animation: shake 0.4s ease;
- }
+}
 
- .checkmark {
+.checkmark {
   display: none;
   margin-right: 5px;
   color: green;
- }
+}
 
- .form-status.success .checkmark {
+.form-status.success .checkmark {
   display: inline-block;
   animation: fadeIn 0.5s ease forwards;
- }
+}

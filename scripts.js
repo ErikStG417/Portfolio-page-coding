@@ -139,3 +139,72 @@ async function sendForm(e) {
 if (form) {
   form.addEventListener("submit", sendForm);
 }
+
+// Navbar bubble indicator with smooth animations
+function initNavBubble() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navList = document.querySelector('.nav-list');
+  
+  // Create bubble element
+  const bubble = document.createElement('div');
+  bubble.className = 'nav-bubble';
+  navList.appendChild(bubble);
+  
+  let scrollTimeout;
+  
+  function updateBubble(link) {
+    const linkRect = link.getBoundingClientRect();
+    const navRect = navList.getBoundingClientRect();
+    
+    bubble.style.width = linkRect.width + 'px';
+    bubble.style.left = (linkRect.left - navRect.left) + 'px';
+  }
+  
+  // Update bubble on link click
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      updateBubble(this);
+      
+      // Navigate after animation
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 100);
+    });
+  });
+  
+  // Debounced scroll handler for smoother updates
+  window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      let currentSection = null;
+      
+      navLinks.forEach(link => {
+        const sectionId = link.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 3) {
+            currentSection = link;
+          }
+        }
+      });
+      
+      if (currentSection) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        currentSection.classList.add('active');
+        updateBubble(currentSection);
+      }
+    }, 50);
+  });
+  
+  // Initialize bubble position
+  const activeLink = document.querySelector('.nav-link.active');
+  if (activeLink) updateBubble(activeLink);
+}
+
+// Call on page load
+document.addEventListener('DOMContentLoaded', initNavBubble);

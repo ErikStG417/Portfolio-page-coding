@@ -545,3 +545,21 @@ textarea:invalid {
   animation: fadeIn 0.5s ease forwards;
 }
 
+
+
+
+/* Mobile navbar adjustments */
+@media (max-width: 468px) {
+  .nav-list {
+    gap: var(--space-xs);
+  }
+  
+  .nav-link {
+    padding: var(--space-2xs) var(--space-xs);
+    font-size: var(--step--1);
+  }
+  
+  .nav-bubble {
+    height: 36px;
+  }
+}
